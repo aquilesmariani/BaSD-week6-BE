@@ -1,6 +1,8 @@
-var express = require("express")
+var express = require('express')
+var cors = require('cors')
 
 var app = express()
+app.use(cors())
 const validateQuery = (fields) =>
   (req, res, next) => {
     var isFieldMissing = false
